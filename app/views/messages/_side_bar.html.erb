@@ -1,6 +1,22 @@
-<div class="side_bar">
-  <div class="side_bar__header">
+<div class="sidebar">
+  <div class="sidebar__header">
+    <div class="sidebar__user_name">
+    <a href="#">Tom</a>
+    <%# <%= link_to "#{current_user.name}", xxxxx_path %> 
+    </div>
+    <div class="create_room">
+    <a href="#">チャットを作成する</a>
+    <%# <%= link_to "チャットを作成する", xxxxx_path %> 
+    </div>
   </div>
-  <div class="side_bar__main">
+  <div class="sidebar__main">
+    <ul class="room_lists">
+      <li class="room_list"><a href="#">techroom1</a></li>
+      <li class="room_list"><a href="#">techroom2</a></li>
+      <li class="room_list"><a href="#">techroom3</a></li>
+      <%# <% @rooms.each do |room| %>
+      <%# <li class="room_list"><%= link_to "#{room}", xxxxx_path %> 
+      <%# </li><% end %> 
+     </ul>
   </div>
 </div>
