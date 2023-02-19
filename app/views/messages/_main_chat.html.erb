@@ -1,0 +1,46 @@
+<div class="main_chat">
+  <div class="main_chat__header">
+    <div class="chatroom_name">
+    hogafuga <%# <%= current_room.name %>
+    </div>
+    <div class="delete_room">
+    <a href="#">チャットを終了する</a>
+    <%# <%= link_to "チャットを終了する", xxxxx_path %> 
+    </div>
+  </div>
+  <div class="main_chat__main">
+    <%# <% @messages.each do |message| %> 
+      <%# <%= message.user.name %>
+      <%# <%= message.created_at %>
+      <%# <%= message.text %>
+    <%# <% end %> 
+    <div class="message">
+      <div class="message__detail">
+        <div class="message__user">Tom</div>
+        <div class="message__date">2020/3/31(Wed) 12:43:30</div>
+      </div>
+      <div class="message__content">
+      おはよう 
+      </div>
+    </div>
+    <div class="message">
+      <div class="message__detail">
+        <div class="message__user">Sim</div>
+        <div class="message__date">2020/3/31(Wed) 15:43:30</div>
+      </div>
+      <div class="message__content">
+      おはよう
+      </div>
+    </div>
+  </div>
+  <div class="form">
+    <div class="form-input">
+    <input type="text" placeholder="type a message" class="message_form__text">
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <input type="file" class="hidden">
+    </label>
+    </div>
+    <input type="submit" value="送信"  class="message_form__submit">
+  </div>
+</div>
