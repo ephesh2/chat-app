@@ -8,32 +8,11 @@
     <%# <%= link_to "チャットを終了する", xxxxx_path %> 
     </div>
   </div>
-  <div class="main_chat__main">
-    <%# <% @messages.each do |message| %> 
-      <%# <%= message.user.name %>
-      <%# <%= message.created_at %>
-      <%# <%= message.text %>
-    <%# <% end %> 
-    <div class="message">
-      <div class="message__detail">
-        <div class="message__user">Tom</div>
-        <div class="message__date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message__content">
-      おはよう 
-      </div>
-    </div>
-    <div class="message">
-      <div class="message__detail">
-        <div class="message__user">Sim</div>
-        <div class="message__date">2020/3/31(Wed) 15:43:30</div>
-      </div>
-      <div class="message__content">
-      おはよう
-      </div>
-    </div>
-  </div>
-  
+
+<div class='main_chat__main'>
+  <%= render partial: 'message', collection: @messages %>
+</div>
+
   <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
     <div class="form-input">
      <%= f.text_field :content, placeholder: "type a message", class: "message_form__text" %>
