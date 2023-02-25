@@ -4,8 +4,7 @@
       <%= @room.name %>
     </div>
     <div class="delete_room">
-    <a href="#">チャットを終了する</a>
-    <%# <%= link_to "チャットを終了する", xxxxx_path %> 
+    <%= link_to "チャットを終了する", room_path(@room), method: :delete %> 
     </div>
   </div>
 
