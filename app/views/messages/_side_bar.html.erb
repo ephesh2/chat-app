@@ -8,12 +8,12 @@
     </div>
   </div>
   <div class="sidebar__main">
-    <ul class="room_lists">
+    <div class="room_lists">
         <% current_user.rooms.each do |room| %>
-        <li class="room_list">
-        <%= link_to room.name, room_messages_path(room) %>
-        </li>
+          <div class="room_list">
+          <%= link_to room.name, room_messages_path(room) %>
+          </div>
         <% end %> 
-     </ul>
+    </div>
   </div>
 </div>
